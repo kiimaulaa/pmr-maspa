@@ -1684,16 +1684,16 @@
             
             // Set Documentation Link in Modal
             const docWrapper = document.getElementById('modal-documentation-wrapper');
-            const docA = document.getElementById('modal-documentation-link');
-            if (docLink && docLink !== '') {
-                docA.href = docLink;
-                docWrapper.classList.remove('hidden');
-            } else {
-                docWrapper.classList.add('hidden');
-            }
+            const modalDocLink = document.getElementById('modal-documentation-link');
+                if (docLink && docLink !== '#') {
+                    modalDocLink.href = docLink;
+                    docWrapper.classList.remove('hidden');
+                } else {
+                    document.getElementById('modal-documentation-wrapper').classList.add('hidden');
+                }
 
-            const modal = document.getElementById('program-modal');
-            modal.classList.remove('hidden');
+                const modal = document.getElementById('program-modal');
+                modal.classList.remove('hidden');
             setTimeout(() => {
                 modal.firstElementChild.classList.remove('scale-95');
                 modal.firstElementChild.classList.add('scale-100');
